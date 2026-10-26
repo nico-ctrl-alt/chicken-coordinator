@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cj8xp4wb7tq5x"]
+
+[ext_resource type="Shader" uid="uid://dxp7a286vmm6f" path="res://ripples.gdshader" id="1_r6t4r"]
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_r6t4r")
+shader_parameter/color = Vector4(0, 0, 0, 0)
+shader_parameter/colors = 64.0
+shader_parameter/rings = 5.015

@@ -1,0 +1,12 @@
+[gd_resource type="Sky" load_steps=3 format=3 uid="uid://bthbn477avd4"]
+
+[ext_resource type="Shader" uid="uid://bqsge0j5gqy8k" path="res://mats/skyslove.gdshader" id="1_n1514"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pogw7"]
+shader = ExtResource("1_n1514")
+shader_parameter/starness = 0.0
+shader_parameter/color = Color(0.9933316, 0.81127065, 0, 1)
+shader_parameter/speed = 0.1
+
+[resource]
+sky_material = SubResource("ShaderMaterial_pogw7")

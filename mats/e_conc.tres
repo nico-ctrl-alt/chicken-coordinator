@@ -1,0 +1,30 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://bmel2n36x3y7a"]
+
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="1_vcu4n"]
+[ext_resource type="Texture2D" uid="uid://t61mh0646ab" path="res://IMAGES/CARDBOAR.TGA" id="2_vcu4n"]
+[ext_resource type="Texture2D" uid="uid://cg18cn77oyly3" path="res://GI/x_GI.tres" id="3_0fbet"]
+[ext_resource type="Texture2D" uid="uid://b6w076bnkry0l" path="res://GI/y_GI.tres" id="4_6rjrx"]
+[ext_resource type="Texture2D" uid="uid://buk3m6kmxhvap" path="res://GI/z_GI.tres" id="5_bbpvs"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_vcu4n")
+shader_parameter/tex2D = ExtResource("2_vcu4n")
+shader_parameter/color = Vector3(1, 0.5, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/bump = ExtResource("2_vcu4n")
+shader_parameter/height = 2.0
+shader_parameter/n_scale = 1.735
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0
+shader_parameter/x_GI = ExtResource("3_0fbet")
+shader_parameter/y_GI = ExtResource("4_6rjrx")
+shader_parameter/z_GI = ExtResource("5_bbpvs")
+shader_parameter/GI_size = 100.0
+shader_parameter/x_offset = Vector3(0, 0, 0)
+shader_parameter/y_offset = Vector3(0, 0, 0)
+shader_parameter/z_offset = Vector3(0, 0, 0)
+shader_parameter/reflectiveness = 0.0

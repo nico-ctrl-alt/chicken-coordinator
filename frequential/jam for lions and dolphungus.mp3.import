@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://w8mxocpebf5k"
+path="res://.godot/imported/jam for lions and dolphungus.mp3-5e18976a487dd1c9197958afd5cef9b1.mp3str"
+
+[deps]
+
+source_file="res://frequential/jam for lions and dolphungus.mp3"
+dest_files=["res://.godot/imported/jam for lions and dolphungus.mp3-5e18976a487dd1c9197958afd5cef9b1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

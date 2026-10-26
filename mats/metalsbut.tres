@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cibmnan7bhd3w"]
+
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="1_k356u"]
+[ext_resource type="Texture2D" uid="uid://pt554kh7mvg7" path="res://256/0A0A0A_A9A9A9_525252_747474-256px.png" id="2_k356u"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_k356u")
+shader_parameter/color = Vector3(1, 1, 1)
+shader_parameter/metallic = 1.0
+shader_parameter/mirror_tex2D = ExtResource("2_k356u")
+shader_parameter/height = 1.0
+shader_parameter/n_scale = 1.0
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0

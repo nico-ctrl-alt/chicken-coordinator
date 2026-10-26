@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cmen4mmwimwcb"]
+
+[ext_resource type="Shader" uid="uid://chgiqsuxt0vbg" path="res://electricity.gdshader" id="1_mbmfs"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_mbmfs")
+shader_parameter/color = Vector3(0.5, 0.5, 1)

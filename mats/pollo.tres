@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bvairddjju82i"]
+
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="1_hjo0k"]
+[ext_resource type="Texture2D" uid="uid://clsirig01e0dr" path="res://spheremap.png" id="2_hjo0k"]
+[ext_resource type="Texture2D" uid="uid://diaxmd2uo8wjx" path="res://IMAGES/pollon.png" id="3_cke0m"]
+[ext_resource type="Texture2D" uid="uid://bfbrlpqxyhq1m" path="res://GI/y_GI2.tres" id="4_wl4tl"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_hjo0k")
+shader_parameter/tex2D = ExtResource("3_cke0m")
+shader_parameter/color = Vector3(1, 1, 1)
+shader_parameter/metallic = 0.2
+shader_parameter/mirror_tex2D = ExtResource("2_hjo0k")
+shader_parameter/height = 1.0
+shader_parameter/n_scale = 1.0
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0
+shader_parameter/y_GI = ExtResource("4_wl4tl")
+shader_parameter/GI_size = 365.0
+shader_parameter/x_offset = Vector3(0, 0, 0)
+shader_parameter/y_offset = Vector3(0, 0, 0)
+shader_parameter/z_offset = Vector3(0, 0, 0)
+shader_parameter/reflectiveness = 0.0

@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dmn35upuddlol"]
+
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="1_nxnaa"]
+[ext_resource type="Texture2D" uid="uid://c8ymapr7nhh3y" path="res://SS/016.BMP" id="2_x3e3i"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_nxnaa")
+shader_parameter/tex2D = ExtResource("2_x3e3i")
+shader_parameter/color = Vector3(0, 0, 0)
+shader_parameter/metallic = 0.0
+shader_parameter/bump = ExtResource("2_x3e3i")
+shader_parameter/height = 1.0
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0

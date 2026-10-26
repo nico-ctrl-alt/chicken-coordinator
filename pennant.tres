@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cpyjuc5p8rax5"]
+
+[ext_resource type="Texture2D" uid="uid://dlgab1gu1tfss" path="res://IMAGES/pennant.png" id="1_18822"]
+
+[resource]
+cull_mode = 2
+diffuse_mode = 3
+albedo_texture = ExtResource("1_18822")

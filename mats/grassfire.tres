@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://duevh1jrcqb3u"]
+
+[ext_resource type="Shader" uid="uid://tm8sm0bw1pq8" path="res://grass.gdshader" id="1_dyr5q"]
+[ext_resource type="Texture2D" uid="uid://dbt0qskwbaoky" path="res://baked.png" id="2_0up18"]
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_dyr5q")
+shader_parameter/_maintex = ExtResource("2_0up18")
+shader_parameter/chroma = Color(0.5647059, 0.67058825, 0.4509804, 1)
+shader_parameter/moreless = 1.03
+shader_parameter/color1 = Color(0.5506989, 0.8153762, 0.48269117, 1)
+shader_parameter/color2 = Color(0.68376505, 0.81395626, 0.5951572, 0)
+shader_parameter/shell_space = 0.001
+shader_parameter/amp = 3.72
+shader_parameter/freq = 1.235

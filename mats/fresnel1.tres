@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c7y0c2kqnrmbq"]
+
+[ext_resource type="Shader" uid="uid://d1ob02bept7a0" path="res://mats/thesanddune.gdshader" id="1_7f8d4"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_7f8d4")
+shader_parameter/color = Vector4(10, 0.4, 0.4, 1)
+shader_parameter/IOR = 0.0
+shader_parameter/multiplier = 1.0
+shader_parameter/additive = 1.0
+shader_parameter/expo = 2.0

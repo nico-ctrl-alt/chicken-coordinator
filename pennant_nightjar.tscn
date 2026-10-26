@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://ckrey5cbomuaj"]
+
+[ext_resource type="Script" uid="uid://cp1i1dfcce5lm" path="res://pennant_nightjar.gd" id="1_6crsv"]
+[ext_resource type="ArrayMesh" uid="uid://sj3adat0ghbr" path="res://pennant_high.tres" id="2_n2krb"]
+[ext_resource type="ArrayMesh" uid="uid://u2la7bb2vqf" path="res://pennant_low.tres" id="3_vte6e"]
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="4_a2rw7"]
+[ext_resource type="Texture2D" uid="uid://b5871a8syriio" path="res://256/070B0C_B2C7CE_728FA3_5B748B-256px.png" id="5_ta14r"]
+[ext_resource type="Material" uid="uid://cpyjuc5p8rax5" path="res://pennant.tres" id="6_bur3y"]
+[ext_resource type="Material" uid="uid://cxxdaunybqi22" path="res://mats/blood.tres" id="7_b1fmh"]
+[ext_resource type="Texture2D" uid="uid://b0qlry2iiqrrm" path="res://12_640/RST078.JPG" id="8_vte6e"]
+[ext_resource type="Texture2D" uid="uid://puj4desq0qsf" path="res://sounds/S/025.BMP" id="9_a2rw7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oi6av"]
+render_priority = 0
+shader = ExtResource("4_a2rw7")
+shader_parameter/color = Vector3(1, 1, 1)
+shader_parameter/metallic = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/mirror_tex2D = ExtResource("5_ta14r")
+shader_parameter/height = 1.0
+shader_parameter/n_scale = 1.0
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0
+shader_parameter/GI_size = 1200.0
+shader_parameter/x_offset = Vector3(0, 0, 0)
+shader_parameter/y_offset = Vector3(0, 0, 0)
+shader_parameter/z_offset = Vector3(0, 0, 0)
+shader_parameter/reflectiveness = 0.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g1so1"]
+emission_shape = 1
+emission_sphere_radius = 1.96
+spread = 180.0
+initial_velocity_min = 20.91
+initial_velocity_max = 51.329998
+gravity = Vector3(0, -50, 0)
+scale_min = 3.0
+scale_max = 3.0
+
+[sub_resource type="Curve" id="Curve_v2u6q"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.24999999, 0.47962826), 0.0, 0.0, 0, 0, Vector2(0.44807693, 0.90243024), 0.0, 0.0, 0, 0, Vector2(0.70384616, 0.5400285), 0.0, 0.0, 0, 0, Vector2(0.9576923, 0.93030727), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_v2u6q"]
+material = ExtResource("7_b1fmh")
+size = 1.053
+section_length = 0.365
+curve = SubResource("Curve_v2u6q")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1qi3f"]
+radius = 7.755022
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nrcxa"]
+viewport_path = NodePath("SubViewport")
+
+[node name="pennant_nightjar" type="CharacterBody3D" unique_id=1219072046 node_paths=PackedStringArray("particles", "healthbar", "healthbar_vis")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_6crsv")
+speed = 100.0
+particles = NodePath("blood")
+healthbar = NodePath("SubViewport/TextureProgressBar")
+healthbar_vis = NodePath("Sprite3D")
+high_skin = Array[Mesh]([ExtResource("2_n2krb")])
+low_skin = Array[Mesh]([ExtResource("3_vte6e")])
+metadata/_custom_type_script = "uid://cp1i1dfcce5lm"
+
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=1411207016]
+transform = Transform3D(-4.371139e-06, -99.99999, -9.094947e-13, -1.1920931e-05, -9.094947e-13, 99.99999, -100, 4.3711384e-06, -1.1920931e-05, 0, 0, 0)
+mesh = ExtResource("2_n2krb")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_oi6av")
+surface_material_override/1 = ExtResource("6_bur3y")
+
+[node name="blood" type="GPUParticles3D" parent="." unique_id=990374800]
+emitting = false
+amount = 50
+lifetime = 2.1599999999999997
+explosiveness = 1.0
+trail_enabled = true
+trail_lifetime = 0.64
+process_material = SubResource("ParticleProcessMaterial_g1so1")
+draw_pass_1 = SubResource("RibbonTrailMesh_v2u6q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1132816787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9993706, 0, 0)
+shape = SubResource("SphereShape3D_1qi3f")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1678036613]
+size = Vector2i(1932, 512)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="SubViewport" unique_id=1520813660]
+offset_right = 1939.0
+offset_bottom = 695.0
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 20
+stretch_margin_top = 20
+stretch_margin_right = 20
+stretch_margin_bottom = 20
+texture_under = ExtResource("8_vte6e")
+texture_progress = ExtResource("9_a2rw7")
+texture_progress_offset = Vector2(13.115, -13.815)
+tint_under = Color(1, 0.42745098, 0.54509807, 1)
+tint_progress = Color(0.25490198, 1, 0.26666668, 1)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1403559108]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 4.000682, 3.4728248)
+billboard = 1
+texture = SubResource("ViewportTexture_nrcxa")

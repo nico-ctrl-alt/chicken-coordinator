@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kp82741jmv3f"
+path="res://.godot/imported/ordained to my church.mp3-458bae3aa1711253b22a57b018043556.mp3str"
+
+[deps]
+
+source_file="res://frequential/ordained to my church.mp3"
+dest_files=["res://.godot/imported/ordained to my church.mp3-458bae3aa1711253b22a57b018043556.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,7 @@
+[gd_resource type="PlaneMesh" load_steps=2 format=3 uid="uid://fmtih1dj6qij"]
+
+[ext_resource type="Material" uid="uid://cj8xp4wb7tq5x" path="res://mats/ripplesdelight.tres" id="1_rsx76"]
+
+[resource]
+material = ExtResource("1_rsx76")
+orientation = 2

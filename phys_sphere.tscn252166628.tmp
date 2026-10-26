@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3cm5vsog7ei0"]
+
+[ext_resource type="Script" uid="uid://gewckhboos7t" path="res://scripts/physics_body.gd" id="1_mb007"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mb007"]
+
+[node name="PhysicsBody" type="RigidBody3D"]
+mass = 0.4
+gravity_scale = 3.0
+script = ExtResource("1_mb007")
+metadata/_custom_type_script = "uid://gewckhboos7t"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_mb007")

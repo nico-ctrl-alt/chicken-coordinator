@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://dssyioovevguh"]
+
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="1_1jwgi"]
+[ext_resource type="Texture2D" uid="uid://b4ywqu7x3gf0n" path="res://SS/008.BMP" id="2_1jwgi"]
+[ext_resource type="Texture2D" uid="uid://6xtong2qi2c6" path="res://256/2A2A2A_B3B3B3_6D6D6D_848C8C-256px.png" id="3_lidxh"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1jwgi")
+shader_parameter/color = Vector3(0.2, 0.2, 0.4)
+shader_parameter/metallic = 1.0
+shader_parameter/mirror_tex2D = ExtResource("3_lidxh")
+shader_parameter/bump = ExtResource("2_1jwgi")
+shader_parameter/height = 1.0
+shader_parameter/n_scale = 1.0
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0

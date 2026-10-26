@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://chp2fub38dmn8"]
+
+[ext_resource type="Script" uid="uid://ciqi1ywhmq2vh" path="res://scripts/wave_fighter.gd" id="1_jhg72"]
+[ext_resource type="PackedScene" uid="uid://wdp7plgqwku4" path="res://baby_kohli.tscn" id="2_nhgfs"]
+[ext_resource type="PackedScene" uid="uid://d0yvjpk5gvm4n" path="res://yingfuk.tscn" id="3_ndm6m"]
+[ext_resource type="PackedScene" uid="uid://dy64kedectf6x" path="res://loba_luv.tscn" id="4_arux8"]
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="5_m5nho"]
+[ext_resource type="Texture2D" uid="uid://5hhuwplwhl6g" path="res://256/54584E_B1BAC5_818B91_A7ACA3-256px.png" id="6_5v5sf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yb3jt"]
+render_priority = 0
+shader = ExtResource("5_m5nho")
+shader_parameter/color = Vector3(1, 1, 1)
+shader_parameter/metallic = 1.21
+shader_parameter/mirror_tex2D = ExtResource("6_5v5sf")
+shader_parameter/height = -1.16
+shader_parameter/n_scale = 1.0
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0
+shader_parameter/GI_size = 1200.0
+shader_parameter/x_offset = Vector3(0, 0, 0)
+shader_parameter/y_offset = Vector3(0, 0, 0)
+shader_parameter/z_offset = Vector3(0, 0, 0)
+shader_parameter/reflectiveness = -0.125
+
+[node name="Wave_Fighter" type="Node3D"]
+
+[node name="SupaFighta" type="Node" parent="." node_paths=PackedStringArray("spawn_point")]
+script = ExtResource("1_jhg72")
+listofenemies = Array[PackedScene]([ExtResource("2_nhgfs"), ExtResource("3_ndm6m"), ExtResource("4_arux8")])
+spawn_point = NodePath("../CSGSphere3D")
+metadata/_custom_type_script = "uid://ciqi1ywhmq2vh"
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0028063965, 0.956427, -0.005532074)
+flip_faces = true
+rings = 11
+material = SubResource("ShaderMaterial_yb3jt")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.956427, 0)

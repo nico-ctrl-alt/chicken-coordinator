@@ -1,0 +1,171 @@
+[gd_scene load_steps=16 format=3 uid="uid://u54vthb8hmuh"]
+
+[ext_resource type="Texture2D" uid="uid://cg18cn77oyly3" path="res://GI/x_GI.tres" id="1_6bca6"]
+[ext_resource type="Texture2D" uid="uid://b6w076bnkry0l" path="res://GI/y_GI.tres" id="2_njslb"]
+[ext_resource type="Shader" uid="uid://yac1ade8a4vu" path="res://unlit.gdshader" id="3_qr74g"]
+[ext_resource type="Texture2D" uid="uid://2vpylmlxen0e" path="res://s1.webp" id="4_wxch1"]
+[ext_resource type="Texture2D" uid="uid://buk3m6kmxhvap" path="res://GI/z_GI.tres" id="5_8w0t8"]
+[ext_resource type="CameraAttributesPhysical" uid="uid://6jqdqefc067i" path="res://GI/thesanddune.tres" id="6_146h7"]
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="7_bbjew"]
+[ext_resource type="Texture2D" uid="uid://c2yh0octiok7f" path="res://256/4C462E_6D876C_9AAC8F_9AABA6-256px.png" id="8_0xvk5"]
+[ext_resource type="Texture2D" uid="uid://dege1fypltckg" path="res://256/1D3FCC_051B5F_81A0F2_5579E9-256px.png" id="9_rflcw"]
+[ext_resource type="Texture2D" uid="uid://l5lo4ftxgs6h" path="res://256/EE4128_FC8E82_9A0704_BF0F05-256px.png" id="10_rb2je"]
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_un78y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qc5v5"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("3_qr74g")
+shader_parameter/tex = SubResource("Texture2DRD_un78y")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nlk33"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("7_bbjew")
+shader_parameter/color = Vector3(0.8, 2, 0.8)
+shader_parameter/metallic = 1.155
+shader_parameter/mirror_tex2D = ExtResource("8_0xvk5")
+shader_parameter/height = 1.0
+shader_parameter/n_scale = 1.735
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0
+shader_parameter/x_GI = ExtResource("1_6bca6")
+shader_parameter/y_GI = ExtResource("2_njslb")
+shader_parameter/z_GI = ExtResource("5_8w0t8")
+shader_parameter/GI_size = 1200.0
+shader_parameter/x_offset = Vector3(0, 0, 0)
+shader_parameter/y_offset = Vector3(0, 0, 0)
+shader_parameter/z_offset = Vector3(0, 0, 0)
+shader_parameter/reflectiveness = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gukuy"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("7_bbjew")
+shader_parameter/color = Vector3(1, 1, 1)
+shader_parameter/metallic = 1.0
+shader_parameter/mirror_tex2D = ExtResource("9_rflcw")
+shader_parameter/height = 1.0
+shader_parameter/n_scale = 1.0
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0
+shader_parameter/x_GI = ExtResource("1_6bca6")
+shader_parameter/y_GI = ExtResource("2_njslb")
+shader_parameter/z_GI = ExtResource("5_8w0t8")
+shader_parameter/GI_size = 1200.0
+shader_parameter/x_offset = Vector3(0, 0, 0)
+shader_parameter/y_offset = Vector3(0, 0, 0)
+shader_parameter/z_offset = Vector3(0, 0, 0)
+shader_parameter/reflectiveness = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3llgx"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("7_bbjew")
+shader_parameter/color = Vector3(1.32, 0.3, 0.3)
+shader_parameter/metallic = 1.0
+shader_parameter/mirror_tex2D = ExtResource("10_rb2je")
+shader_parameter/height = 1.0
+shader_parameter/n_scale = 2.205
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0
+shader_parameter/x_GI = ExtResource("1_6bca6")
+shader_parameter/y_GI = ExtResource("2_njslb")
+shader_parameter/z_GI = ExtResource("5_8w0t8")
+shader_parameter/GI_size = 1200.0
+shader_parameter/x_offset = Vector3(0, 0, 0)
+shader_parameter/y_offset = Vector3(0, 0, 0)
+shader_parameter/z_offset = Vector3(0, 0, 0)
+shader_parameter/reflectiveness = 0.0
+
+[node name="GI_stuff" type="Node"]
+
+[node name="x2" type="Sprite3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 22.93658, 0)
+
+[node name="y2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 22.93658, 0)
+
+[node name="z2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.93658, 0)
+
+[node name="x" type="Sprite3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 11.46829, 0)
+texture = ExtResource("1_6bca6")
+
+[node name="y" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11.46829, 0)
+texture = ExtResource("2_njslb")
+
+[node name="Z_DEPTH" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.0715933, 17.273293, 21.203661)
+material_override = SubResource("ShaderMaterial_qc5v5")
+texture = ExtResource("4_wxch1")
+
+[node name="z" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.46829, 0)
+texture = ExtResource("5_8w0t8")
+
+[node name="x_GI" type="SubViewport" parent="."]
+positional_shadow_atlas_size = 100
+oversampling = false
+size = Vector2i(100, 100)
+render_target_update_mode = 1
+
+[node name="Camera3D" type="Camera3D" parent="x_GI"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 319.24612, 91.14258, -5.1568604)
+cull_mask = 1048573
+attributes = ExtResource("6_146h7")
+projection = 1
+current = true
+size = 1200.0
+
+[node name="y_GI" type="SubViewport" parent="."]
+use_occlusion_culling = true
+positional_shadow_atlas_size = 100
+oversampling = false
+size = Vector2i(100, 100)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="y_GI"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -66.90961, 1931.3296, -38.752502)
+attributes = ExtResource("6_146h7")
+projection = 1
+size = 1200.0
+
+[node name="z_GI" type="SubViewport" parent="."]
+positional_shadow_atlas_size = 100
+oversampling = false
+size = Vector2i(100, 100)
+render_target_update_mode = 1
+
+[node name="Camera3D" type="Camera3D" parent="z_GI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.90961, 91.14258, 351.16663)
+attributes = ExtResource("6_146h7")
+projection = 1
+size = 1200.0
+
+[node name="tes" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.60957, -5.194687, -98.65703)
+visible = false
+material_override = SubResource("ShaderMaterial_nlk33")
+radius = 29.592327
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.47958, 9.743992, -106.085754)
+visible = false
+material_override = SubResource("ShaderMaterial_gukuy")
+radius = 29.592327
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.81136, 1.5451965, -35.36192)
+visible = false
+material_override = SubResource("ShaderMaterial_3llgx")
+radius = 29.592327

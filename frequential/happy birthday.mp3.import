@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0xdv6jikoopo"
+path="res://.godot/imported/happy birthday.mp3-6ed4e87c85d067f6ddb089481a09ab4b.mp3str"
+
+[deps]
+
+source_file="res://frequential/happy birthday.mp3"
+dest_files=["res://.godot/imported/happy birthday.mp3-6ed4e87c85d067f6ddb089481a09ab4b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

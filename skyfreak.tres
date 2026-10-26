@@ -1,0 +1,29 @@
+[gd_resource type="Environment" format=3 uid="uid://df0vsasqavuh4"]
+
+[ext_resource type="Sky" uid="uid://bthbn477avd4" path="res://livelovelaug.tres" id="1_vhn1s"]
+
+[resource]
+background_mode = 2
+sky = ExtResource("1_vhn1s")
+ambient_light_color = Color(0, 0, 0, 0)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
+reflected_light_source = 2
+tonemap_exposure = 0.8
+tonemap_white = 0.2
+ssao_radius = 4.57
+ssao_intensity = 6.46
+ssao_light_affect = 0.09
+glow_normalized = true
+glow_intensity = 8.0
+glow_strength = 0.33
+glow_bloom = 0.34
+glow_blend_mode = 0
+glow_hdr_threshold = 2.07
+fog_enabled = true
+fog_density = 0.0002
+fog_sky_affect = 0.0
+volumetric_fog_gi_inject = 0.0
+volumetric_fog_length = 3.0
+volumetric_fog_detail_spread = 2.9281712
+volumetric_fog_sky_affect = 0.0

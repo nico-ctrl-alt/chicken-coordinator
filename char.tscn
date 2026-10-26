@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c35y32cq7mtrs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ws0pu"]
+transparency = 1
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+disable_ambient_light = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ws0pu"]
+
+[node name="Char" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_ws0pu")
+mesh = SubResource("PlaneMesh_ws0pu")

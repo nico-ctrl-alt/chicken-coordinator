@@ -1,0 +1,32 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://d2g6m6fkfc58s"]
+
+[ext_resource type="Shader" uid="uid://d73au6naw6o0" path="res://mats/oasisnow.gdshader" id="1_thouw"]
+[ext_resource type="Texture2D" uid="uid://dxra7ergcseyj" path="res://CONCRETE/HORIZCO.TGA" id="2_l0vc8"]
+[ext_resource type="Texture2D" uid="uid://bw8br5fytpihp" path="res://256/1A2461_3D70DB_2C3C8F_2C6CAC-256px.png" id="3_4m4u2"]
+[ext_resource type="Texture2D" uid="uid://cg18cn77oyly3" path="res://GI/x_GI.tres" id="4_asyu7"]
+[ext_resource type="Texture2D" uid="uid://b6w076bnkry0l" path="res://GI/y_GI.tres" id="5_gwnqw"]
+[ext_resource type="Texture2D" uid="uid://buk3m6kmxhvap" path="res://GI/z_GI.tres" id="6_yisxf"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_thouw")
+shader_parameter/tex2D = ExtResource("2_l0vc8")
+shader_parameter/color = Vector3(0.5, 0.6, 1)
+shader_parameter/metallic = 0.0
+shader_parameter/mirror_tex2D = ExtResource("3_4m4u2")
+shader_parameter/bump = ExtResource("2_l0vc8")
+shader_parameter/height = 1.0
+shader_parameter/n_scale = 1.0
+shader_parameter/multiplier = 0.0
+shader_parameter/additive = 0.0
+shader_parameter/c_speed = 10.0
+shader_parameter/displace = 0.0
+shader_parameter/x_GI = ExtResource("4_asyu7")
+shader_parameter/y_GI = ExtResource("5_gwnqw")
+shader_parameter/z_GI = ExtResource("6_yisxf")
+shader_parameter/GI_size = 100.0
+shader_parameter/x_offset = Vector3(0, 0, 0)
+shader_parameter/y_offset = Vector3(0.745, 0.41, 0)
+shader_parameter/z_offset = Vector3(0, 0, 0)
+shader_parameter/reflectiveness = 0.0

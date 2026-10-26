@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://i7atlay1ogqn"]
+
+[ext_resource type="Shader" uid="uid://by8gg5ac8y4r2" path="res://smoke.gdshader" id="1_b2ese"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_b2ese")
+shader_parameter/intensity = 500.0
+shader_parameter/size = 5.37
+shader_parameter/dot_size = 0.0
+shader_parameter/heat = 8.235
+shader_parameter/color = Color(0.0046639782, 0.095096, 0.18914211, 1)
+shader_parameter/color2 = Color(0.4419588, 0.19893026, 0, 1)
+shader_parameter/speed = 0.0
+shader_parameter/alpha = 0.0
